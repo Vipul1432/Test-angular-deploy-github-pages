@@ -32,7 +32,7 @@ jobs:
       #  run: npm test
 
       - name: Build Angular App
-        run: ng build --prod
+        run: ng build --configuration production
 
       - name: Bundle and Output
         run: npm run build
