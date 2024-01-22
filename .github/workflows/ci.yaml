@@ -17,13 +17,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16.15.1"
+          node-version: "18.13"
 
-      - name: Source nvm
-        run: |
-          export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+      #- name: Source nvm
+      #run: nvm install 18.13
+      #     nvm use 18.13
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
