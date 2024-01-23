@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from '../environments/environment.prod';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,6 @@ export class AppComponent {
   environmentName = '';
   title = 'Test';
   constructor() {
-    this.environmentName = environment.apiUrl;
+    this.environmentName = process.env['NG_APP_Test'] ?? '';
   }
 }
